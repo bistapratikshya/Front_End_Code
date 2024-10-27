@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2> Javascript Function</h2>
+
+<p>Javascript function example with dynamic value taken from user input and displayed by concatinating input fieldsn on button click  </p> 
+<label>First Name</label>
+<input type="text" id="fname">
+<label> Last Name</label>
+<input type="text" id="lname"  >
+<button type="button" onclick="myFunction()"> Display full name </button>
+
+<p id="fullName"></p>
+<!-- <p id="demo2"></p> -->
+
+<script>
+  
+ function myFunction() {
+var firstName = document.getElementById("fname").value;
+var lastName = document.getElementById("lname").value;
+  document.getElementById("fullName").innerHTML = "My full name is " + firstName + " " + lastName;
+  /*document.getElementById("demo2").innerHTML = b;*/
+}
+</script>
+
+</body>
+</html>

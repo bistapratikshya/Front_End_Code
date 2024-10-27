@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <label for = "firstname">First Name </label>
+  <input type ="text" id="Fname" >
+  <label for ="lastname"> Last Name</label>
+  <input type="text" id="Lname" >
+  <button type ="button" onClick="gettheName()" > click here</button>
+  <p id= "Fullname"></p>
+   <script>
+     function gettheName() 
+     {
+      var fName = document.getElementById("Fname").value;
+      var lName= document.getElementById("Lname").value;
+      document.getElementById("Fullname").innerHTML = "Last Name is " + lName +  "  First Name is " + fName;
+     }
+   </script>
+
+
+    
+</body>
+</html>
+
+
+<!-- First Name [   ]
+Last Name  [   ]
+
+[See Full Name]
+
+
+Full Name is :  Pratikshya Bista
+
+
+// basic steps we followed to acheive above :
+  -  label first name 
+  - create input field 
+  -  label last name 
+  - create input field
+  - create a button 
+  - create a javascript function,  
+     - function will get user inserted value of first name and last name in above input field. 
+     - function will append first name and last name and display to the HTML place holder tag 
+  -  call javascript funch -->

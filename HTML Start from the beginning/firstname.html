@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+	<label for = "FirstName" > First Name </label>
+	<input type="text" id= "fName">
+	<label for = "LastName" > Last Name </label>
+	<input type="text" id= "lName">
+	<button type= "button" onclick="fnType()"> click</button>
+
+	
+	<script>
+		function fnType(){
+			var first = document.getElementById("fName").value;
+			var  last =document.getElementById("lName").value;
+			document.getElementById("fan").innerHTML= "First name is " + first + "Last name is " + last;
+			}
+
+	</script>
+	<p id="fan"> </p>
+
+
+
+
+</body>
+</html>

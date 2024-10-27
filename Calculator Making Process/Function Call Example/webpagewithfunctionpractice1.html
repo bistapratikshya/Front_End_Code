@@ -1,0 +1,57 @@
+      <!DOCTYPE html>
+      <html>
+      <head></head>
+      <body>
+        <label> First number</label>
+        <input type = "number" id = "one">
+        <label> Second number</label>
+        <input type = "number" id = "two">
+        <button onclick = "processNumbers()"> Click me</button>
+        <div id = "display"></div>
+        <script>
+         function processNumbers(){
+          let num1 = document.getElementById("one").value;
+          let num2 = document.getElementById("two").value;
+          let result = evaluateNumbers(num1, num2);
+          document.getElementById("display").innerHTML = result;
+        }
+
+        function isPositive(num){
+          if(num > 0){
+            return true;
+          }
+          else{
+            return false;
+          }
+        }
+
+        function isEven(num){
+          if(num % 2 == 0){
+            return true;
+          }
+          else {
+            return false;
+          }
+        }
+
+        function evaluateNumbers(num1, num2){
+         let positiveNum1 = isPositive(num1);
+         let positiveNum2= isPositive(num2);
+         let even1 = isEven(num1);
+         let even2= isEven(num2);
+         if (positiveNum1 && positiveNum2 && (even1 || even2)){
+          return "Both numbers are positive and at least one is even, or both numbers are even.";
+        }
+        else if(positiveNum1 && positiveNum2 &&(!even1 && !even2)){
+         return  "Both numbers are positive, but neither is even.";
+       }
+       else if(even1 && even2 &&(!positiveNum1 && positiveNum2)){
+         return  "Both numbers are even, but at least one is negative.";
+       }  
+       else{
+        return "Conditions are not met.";
+      } 
+    }
+  </script>
+</body>
+</html>

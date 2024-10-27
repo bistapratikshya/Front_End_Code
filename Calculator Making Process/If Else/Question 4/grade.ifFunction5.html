@@ -1,0 +1,32 @@
+<!-- . Grade Letter Question: Write a function getGradeLetter(score) that takes a numeric score as a parameter and returns the corresponding grade letter. Use the following grading scale: A: 90 and above B: 80 to 89 C: 70 to 79 D: 60 to 69 E: Below 60. -->
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+	<p> Check Grade Letter</p>
+	<input type = "number" id = "number">
+	<button onclick = "document.getElementById('final').innerHTML = getGradeLetter(document.getElementById('number').value) "> check</button>
+	<label > The final grade is:</label>
+	<span id = "final"></span>
+
+	<script>
+		function  getGradeLetter(x){
+			if( x >= 90){
+				return "A";
+			} 
+			else if( x >= 80 && x <= 89){
+				return "B";
+			}
+			else if( x >= 70 && x <= 79){
+				return "C";
+			}
+			else if( x >= 60 && x <= 69){
+				return "D";
+			}
+			else if( x < 60){
+				return "E";
+			}
+		}
+	</script>
+</body>
+</html>

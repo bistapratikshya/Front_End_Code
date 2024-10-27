@@ -1,0 +1,23 @@
+<!-- 3. **Create a Simple Number Grid**
+   - Write a JavaScript program that creates a 3x3 grid of numbers (1 to 9) and prints it in a tabular format. -->
+   <!DOCTYPE html>
+   <html>
+   <head></head>
+   <body>
+     <p id = "demo"></p>
+     <script>
+      for(i = 1; i < 100 ; i++)
+      {
+         if(i%3==0)
+         {
+            document.getElementById("demo").innerHTML += i + "<br>";
+         }
+         else
+         {
+           document.getElementById("demo").innerHTML += i + "&nbsp;&nbsp;&nbsp;&nbsp; ";
+        }
+
+     }
+  </script> 
+</body>
+</html>

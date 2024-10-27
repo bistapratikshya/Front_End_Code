@@ -1,0 +1,38 @@
+<!-- Question 2: Function Call with Numeric Conditions
+
+	Question: Create a JavaScript function that takes a number as input and calls different functions based on whether the number is positive, negative, or zero. Call handlePositive() if the number is greater than 0, handleNegative() if it is less than 0, and handleZero() if it is exactly 0. -->
+
+	<!DOCTYPE html>
+	<html>
+	<head></head>
+	<body>
+		<input type = "number" id = "thisNumber">
+		<button onclick = "myNumber(document.getElementById('thisNumber').value)" > Here</button>
+
+		<p id = "result">  </p>
+		<script>
+			function handlePositive(){
+				document.getElementById("result").innerHTML = "This is a positive number.";
+			} 
+			function handleNegative(){
+				document.getElementById("result").innerHTML = "This is a negative number.";
+			}
+			function handleZero(){
+				document.getElementById("result").innerHTML = "This is zero number.";
+			}
+
+			function myNumber(number){
+				if(number > 0 ){
+					handlePositive();	
+				}
+				else if( number < 0 ){
+					handleNegative();
+				}
+				else if( number == 0){
+					handleZero();
+				}
+			}
+
+		</script>
+	</body>
+	</html>

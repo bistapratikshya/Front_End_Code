@@ -1,0 +1,38 @@
+<!-- BMI Calculator Question: Write a function calculateBMI(weight, height) that takes weight (in kilograms) and height (in meters) as parameters. Calculate the Body Mass Index (BMI) and return the category based on the BMI value: Underweight: BMI < 18.5 Normal weight: 18.5 ≤ BMI < 24.9 Overweight: 25 ≤ BMI < 29.9 Obesity: BMI ≥ 30. -->
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<label> Weight in Kg</label>
+<input type = "number" id = "kg">
+<label> Height in meters </label>
+<input type = "number" id = "meter">
+<button onclick = "calculateBMI()"> Calculate BMI</button>
+<!-- <p id = "BMI"> </p>  -->
+<p id = "message"></p>
+
+<script>
+function calculateBMI(){
+var weight = document.getElementById("kg").value;
+var height = document.getElementById("meter").value;
+var BMI = weight/ (height*height);
+var category = "";
+/*document.getElementById("BMI").innerHTML = BMI;*/
+if(BMI < 18.5){
+ category = "Underweight";
+}
+else if(BMI >= 18.5 && BMI <= 24.9){
+ category = "Normal Weight"
+}
+else if(BMI >= 25 && BMI <= 29.9){
+ category = "Over Weight"
+}
+else if(BMI >= 30){
+ category = "Normal Weight"
+}
+document.getElementById("message").innerHTML = "The calculated BMI is:"  + BMI + " which categorizes as " + category;
+}
+
+</script>
+</body>
+</html>

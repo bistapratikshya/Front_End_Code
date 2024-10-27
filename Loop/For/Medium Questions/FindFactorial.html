@@ -1,0 +1,19 @@
+<!-- **Find the Factorial of a Number (e.g., 7!)**
+   - Write a JavaScript program that calculates and prints the factorial of a number (e.g., 7!). -->
+   <!DOCTYPE html>
+   <html>
+   <head></head>
+   <body>
+      <p id = "demo"></p>
+      <script>
+         /*let number = 7*/ 
+         let factorial = 1;
+         for(i=1; /*i<=number; */ i<8 ;i++) 
+         {
+            factorial *= i;
+            /*This is same as factorial = factorial*i;*/
+        }
+        document.getElementById("demo").innerHTML = factorial;
+     </script>
+  </body>
+  </html>

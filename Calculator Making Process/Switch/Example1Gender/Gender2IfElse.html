@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <h2>JavaScript switch</h2>
+
+  <input type = "text" id = "name1">
+  <button onclick =  "document.getElementById('demo').innerHTML = myGender()"> Click </button>
+  <p id = "demo"> </p>
+
+  <script>
+   function myGender(){
+      let name = document.getElementById("name1").value;
+      if(name == "Rita"){
+        return "Female";
+      }
+        else if(name == "Shyam"){
+         return "Male";
+        }
+        else{
+          return "Gender not found";
+        }
+    }
+
+  </script>
+  
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript if</h2>
+
+<p>Display "Eligible" if the person is eligible to vote.</p>
+
+<p id="demo">  </p> 
+<input type = "number" id = "passNumber" >
+<button onclick = "checkVotingEligibility()"> Check </button>
+
+
+
+<script>
+  function checkVotingEligibility() {
+    var age = document.getElementById("passNumber").value;
+    var text = "";
+    if (age >= 18) {
+        text = "Eligible to vote";
+    } else {
+        text = "Not eligible to vote";
+    } 
+     document.getElementById("demo").innerHTML = text;
+  } 
+</script>
+</body>
+</html>
+ 
+<!-- 1.Question: Write a function checkVotingEligibility(age) that takes an age as a parameter and returns whether the person is eligible to vote. A person is eligible to vote if they are 18 years old or older. -->

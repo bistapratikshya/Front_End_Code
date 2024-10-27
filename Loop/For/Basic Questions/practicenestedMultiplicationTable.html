@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+   <p id = "result" ></p>
+   <script>
+      var table1 = "<table border = '1'>";
+    table1 += "<tr><th>Multiplication of 1</th> <th> Multliplication of 2</th><th> Multiplication of 3 </th> <th> Multiplication  of 4</th> <th> Multiplication  of 5</th></tr>"  ;
+    
+      for( var i=1;i<11;i++)
+      {
+         table1 += "<tr>";
+         table1 += "<td>1 * " + i + " = " + (1 * i) + "</td>";
+         table1 += "<td>2 * " + i + " = " + (2 * i) + "</td>";
+         table1 += "<td>3 * " + i + " = " + (3 * i) + "</td>";
+         table1 += "<td>4 * " + i + " = " + (4 * i) + "</td>";
+         table1 += "<td>5 * " + i + " = " + (5 * i) + "</td>"; 
+         table1 += "</tr>";
+
+         
+
+      }
+      table1 += "</table>";
+       var table2 = "<table border = '1'>";
+    table2 += "<tr><th>Multiplication of 6</th> <th> Multliplication of 7</th><th> Multiplication of 8 </th> <th> Multiplication of 9</th> <th> Multiplication of 10</th></tr>"  ;
+    
+      for( var i=1;i<11;i++)
+      {
+         table2 += "<tr>";
+         table2 += "<td>6 * " + i + " = " + (6 * i) + "</td>";
+         table2 += "<td>7 * " + i + " = " + (7 * i) + "</td>";
+         table2 += "<td>8 * " + i + " = " + (8 * i) + "</td>";
+         table2 += "<td>9 * " + i + " = " + (9 * i) + "</td>";
+         table2 += "<td>10 * " + i + " = " + (10 * i) + "</td>"; 
+         table2 += "</tr>";
+
+         
+
+      }
+      table2 += "</table>";
+
+
+      document.getElementById("result").innerHTML += table1 + "<br>" + table2  ;
+
+   </script>
+</body>
+</html>
+
+
+
+
+
+ 

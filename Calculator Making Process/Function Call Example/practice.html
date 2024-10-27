@@ -1,0 +1,36 @@
+<!-- Question: Write a JavaScript function that takes a string input and calls different functions based on the value of the input. For example, if the input is "greet", call a function named greetUser(). If the input is "farewell", call a function named sayGoodbye(). If the input does not match any of these, call a function named defaultAction(). --> 
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+	<label> Go here </label>
+	<select id = "greetingType" onchange = "myGreetings(document.getElementById('greetingType').value)"  > 
+		<option value = "greet"  >greet</option>
+		<option value = "farewell" >farewell</option>
+		<option value = " "> </option> 
+	</select>
+	<p id = "show"> </p>
+	<script>
+		function greetUser(){
+		document.getElementById("show").innerHTML = "Namaste";
+	}
+		function sayGoodbye(){
+		document.getElementById("show").innerHTML = "See you soon";
+		}
+		function defaultAction(){
+		document.getElementById("show").innerHTML = "Not found";
+		}
+		function myGreetings(message){
+			if(message == "greet"){
+				greetUser();
+			}
+			else if(message == "farewell"){
+				sayGoodbye();
+			}
+			else{
+				defaultAction();
+			}
+		}
+	</script>
+</body>
+</html>

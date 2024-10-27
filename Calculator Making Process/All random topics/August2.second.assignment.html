@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>   <title> Temperature Conversion   </title></head>
+
+<body>
+	<label> Temperature in Celsius:</label>
+	<input type = "number" id = "celsiusTemperature"> 
+	<input type = "button" onclick = "showFahrenheitValue()" value = " ConvertToFahrenheit">
+	<label> Converted Fahrenheit value is:</label>
+	<p id = "resultInFahrenheit"></p>
+	<br> 
+	<label> Temperature in Fahrenheit: </label>
+	<input type = "text" id = "fahrenheitTemperature">
+	<input type =  "button" onclick = "showCelsiusValue()" value = " ConvertToCelsius" >
+	<label> Converted Celsius value is:</label>
+	<p id = "resultInCelsius"></p>
+
+<!-- °C = (°F - 32) × 5/9;
+	°F = °C × (9/5) + 32 ; -->
+	<script>
+		function showFahrenheitValue(){
+			let celsiusNumber = document.getElementById("celsiusTemperature").value;
+			let fahrenheitNumber =   eval(celsiusNumber * (9/5) + 32);
+			document.getElementById( "resultInFahrenheit").innerHTML = fahrenheitNumber;}
+	</script>
+
+	<script>
+		function showCelsiusValue(){
+			let fahrenheitNumber = document.getElementById("fahrenheitTemperature").value;
+			let celsiusNumber = eval((fahrenheitNumber - 32) * 5/9);
+			document.getElementById("resultInCelsius").innerHTML = celsiusNumber;
+		}
+
+	</script>
+</body>
+</html>

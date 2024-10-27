@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="calculator.practice.css"> 
+</head>
+
+<body>
+<table>
+ <tr>
+  <td colspan="4"> 
+    <input type= "text" id="result"></td>
+  
+</tr> 
+
+<tr>
+  <td> <input type= "button" class= "greyColour" value= "+" onclick="displayInput('+')"></td>
+  <td><input type="button"  class= "greyColour" value="-" onclick="displayInput('-')"></td>
+  <td> <input type= "button" class= "greyColour" value="×" onclick="displayInput('*')"></td>
+  <td> <input type="button" class= "greyColour"  value="÷" onclick= "displayInput('/')"></td>
+
+
+</tr>
+<tr>
+  <td> <input type= "button" class= "white" value= "1" onclick="displayInput('1')"></td>
+  <td><input type="button"  class= "white" value="2" onclick="displayInput('2')"></td>
+  <td> <input type= "button" class= "white" value="3" onclick="displayInput('3')"></td>
+  <td rowspan="4"><input type="button" id= "colourUnique" value="=" onclick="calculateResult()"></td>
+  
+</tr>
+<tr>
+  <td><input type= "button"class= "white"   value="4" onclick="displayInput('4')"></td>
+  <td><input type="button" class= "white" value="5" onclick="displayInput('5')"></td>
+  <td><input type="button" class= "white" value="6" onclick="displayInput('6')"></td>
+ 
+</tr>
+<tr>
+  <td><input type="button" class= "white" value="7" onclick="displayInput('7')"></td>
+  <td><input type="button" class= "white"  value="8" onclick="displayInput('8')"></td>
+  <td><input type="button" class= "white"  value="9" onclick="displayInput('9')"></td>
+  
+</tr>
+<tr>
+
+  <td><input type="button" class= "white"  value="0" onclick="displayInput('0')"></td>
+  <td><input type="button" class= "white"  value="." onclick="displayInput('.')"></td>
+  <td><input type="button" class= "white"  value="AC" onclick = "removeResult()"></td>
+  
+</tr>
+
+<tr> 
+<td><input type= "button" class= "white" value= "X²" onclick= "powerSquare ('x**2')" > </td>
+<td><input type="button" class= "white" value="cube" </td>
+<td> <input type="button" class= "white" value="squareroot" </td>
+
+</tr>
+
+
+</table>
+
+<script src= "calculator.practice.js"> </script>
+
+
+
+
+
+</body>
+</html>
+ 

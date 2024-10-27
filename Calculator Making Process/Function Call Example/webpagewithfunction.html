@@ -1,0 +1,88 @@
+<!-- ### Question:
+
+*Develop a simple HTML page with JavaScript to evaluate two numbers based on specific conditions. Follow these steps:*
+
+1. *HTML Setup:*
+   - Create an HTML form with:
+     - Two input fields for users to enter numbers.
+     - A button that, when clicked, will run a JavaScript function to evaluate the numbers.
+     - A <div> element to display the result.
+
+2. *JavaScript Functions:*
+   - **isPositive(num)**: This function should return true if the given number is greater than 0, otherwise return false.
+   - **isEven(num)**: This function should return true if the given number is even, otherwise return false.
+   - **evaluateNumbers(num1, num2)**: This function should:
+     - Use isPositive(num1) and isPositive(num2) to check if both numbers are positive.
+     - Use isEven(num1) and isEven(num2) to check if both numbers are even.
+     - Determine the result based on the following conditions:
+       - If both numbers are positive and at least one of them is even, or if both numbers are even, return the message "Both numbers are positive and at least one is even, or both numbers are even."
+       - If both numbers are positive but neither is even, return the message "Both numbers are positive, but neither is even."
+       - If both numbers are even but at least one is negative, return the message "Both numbers are even, but at least one is negative."
+       - If none of the above conditions are met, return the message "Conditions are not met."
+
+3. *Integration:*
+   - Implement a function processNumbers() that:
+     - Retrieves the values from the input fields.
+     - Calls evaluateNumbers() with these values.
+     - Displays the result in the <div>.
+
+     	*Example of the HTML and JavaScript Code:* -->
+
+     	<!DOCTYPE html>
+     	<html>
+     	<head></head>
+     	<body>
+
+     		<label>First Number</label>
+     		<input id = "firstNum" type = "number">
+     		<label> Second Number</label>
+     		<input id = "secondNum" type = "number">
+     		<button onclick = "processNumbers()"> click</button>
+     		<div id = "display"></div>
+     		<script>
+     			function processNumbers(){
+     				let num1 = document.getElementById("firstNum").value; 
+     				let num2 = document.getElementById("secondNum").value; 
+     				let result = evaluateNumbers(num1, num2);
+     				document.getElementById("display").innerHTML = result;
+     			}
+
+     			function evaluateNumbers(num1, num2){
+     				let isNum1Positive = isPositive(num1);
+     				let isNum2Positive = isPositive(num2);
+     				let isNum1Even = isEven(num1);
+     				let isNum2Even = isEven(num2);
+     				if(isNum1Positive && isNum2Positive && (isNum1Even || isNum2Even)){
+     					return "Both numbers are positive and at least one is even, or both numbers are even.";
+     				}
+     				else if(isNum1Positive && isNum2Positive && !isNum1Even && !isNum2Even){
+     					return "Both numbers are positive, but neither is even.";
+     				}
+     				else if(isNum1Even && isNum2Even && (!isNum1Positive || !isNum2Positive)){
+     					return "Both numbers are even, but at least one is negative.";
+     				}
+     				else{
+     					return  "Conditions are not met.";
+     				}
+     			}
+
+     			function isPositive(num){
+     				if(num > 0){
+     					return true;
+     				}
+     				else{
+     					return false;
+     				}
+     			}
+
+     			function isEven(num){
+     				if(num % 2 == 0){
+     					return true;
+     				}
+     				else{
+     					return false;
+     				}
+     			}
+     		</script>
+     	</body>
+     	</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2> Mathematical calculation</h2>
+
+<p>   </p> 
+<label>First Number</label>
+<input type="number" id="fname">
+<label> Second Number</label>
+<input type="number" id="lname" >
+<button type="button" onclick="addNumber()"> Add </button>
+<button type="button" onclick="subtractNumber()"> Substract </button>
+<button type="button" onclick="multiplyNumber()"> Multiply</button>
+<button type="button" onclick="divideNumber()"> Divide </button>
+<p id="total"></p>
+<!-- <p id="demo2"></p> -->
+
+<script>
+  
+ function addNumber() {
+var firstNumber = document.getElementById("fname").value || 0 ;
+var secondNumber = document.getElementById("lname").value || 0;
+ 
+  document.getElementById("total").innerHTML = parseInt(firstNumber) +  parseInt (secondNumber);
+  /*document.getElementById("demo2").innerHTML = b;*/
+}
+ function subtractNumber() {
+var firstNumber = document.getElementById("fname").value || 0 ;
+var secondNumber = document.getElementById("lname").value || 0;
+ 
+  document.getElementById("total").innerHTML = parseInt(firstNumber) -  parseInt (secondNumber);
+  /*document.getElementById("demo2").innerHTML = b;*/
+}
+
+ function multiplyNumber() {
+var firstNumber = document.getElementById("fname").value || 0 ;
+var secondNumber = document.getElementById("lname").value || 0;
+ 
+  document.getElementById("total").innerHTML = parseInt(firstNumber) *  parseInt (secondNumber);
+  /*document.getElementById("demo2").innerHTML = b;*/
+}
+
+ function divideNumber() {
+var firstNumber = document.getElementById("fname").value || 0 ;
+var secondNumber = document.getElementById("lname").value || 0;
+ 
+  document.getElementById("total").innerHTML = parseInt(firstNumber) /  parseInt (secondNumber);
+  /*document.getElementById("demo2").innerHTML = b;*/
+}
+
+
+
+
+</script>
+
+</body>
+</html>

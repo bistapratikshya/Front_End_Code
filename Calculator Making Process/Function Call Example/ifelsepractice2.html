@@ -1,0 +1,85 @@
+<!-- ### Question:
+
+*Create a web page with HTML and JavaScript to evaluate two numbers based on the following conditions:*
+
+1. *HTML Setup:*
+   - Create an HTML form with:
+     - Two input fields for users to enter numbers.
+     - A button that, when clicked, will run a JavaScript function to process the numbers.
+     - A <div> element to display the result.
+
+2. *JavaScript Functions:*
+   - **isNegative(num)**: This function should return true if the given number is less than 0, otherwise return false.
+   - **isOdd(num)**: This function should return true if the given number is odd, otherwise return false.
+   - **processNumbers(num1, num2)**: This function should:
+     - Use isNegative(num1) and isNegative(num2) to check if both numbers are negative.
+     - Use isOdd(num1) and isOdd(num2) to check if both numbers are odd.
+     - Determine the result based on the following conditions:
+       - If both numbers are negative and at least one of them is odd, or if both numbers are odd, return the message "Both numbers are negative and at least one is odd, or both are odd."
+       - If both numbers are negative but neither is odd, return the message "Both numbers are negative, but neither is odd."
+       - If both numbers are odd but at least one is non-negative, return the message "Both numbers are odd, but at least one is non-negative."
+       - If none of the above conditions are met, return the message "Conditions are not met."
+
+3. *Integration:*
+   - Implement a function evaluate() that:
+     - Retrieves the values from the input fields.
+     - Calls processNumbers() with these values.
+     - Displays the result in the <div> -->
+
+      <!DOCTYPE html>
+      <html>
+      <head></head>
+      <body>
+        <label> First Number</label>
+        <input type = "number" id = "num1">
+        <label> Second Number</label>
+        <input type = "number" id = "num2">
+        <button onclick = "evaluate()" > Click here </button>
+        <div id = "display"> </div>
+
+        <script>
+          function evaluate(){
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+            let finalValue = processNumbers()
+            document.getElementById("display").innerHTML = finalValue;
+          }
+
+           function isNegative(num){
+           if( num < 0 ){
+            return true;
+           }
+           else{
+            return false;
+           }
+         }
+
+          function isOdd(num){
+            if( num%2 !== 0){
+              return true;
+            }
+            else{
+              return false;
+            }
+          }
+         function processNumbers(num1, num2){
+           let isNum1Negative = isNegative(num1);
+           let isNum2Negative = isNegative(num2);
+           let isNum1Odd = isOdd(num1);
+           let isNum2Odd = isOdd(num2);
+           if( isNum1Negative && isNum2Negative && (isNum1Odd || isNum2Odd ) ){
+            return "Both numbers are negative and at least one is odd, or both are odd."
+           }
+           else if( isNum1Negative && isNum2Negative && (!isNum1Odd && !isNum2Odd ) ){
+             return  "Both numbers are negative, but neither is odd."
+           }
+           else if( isNum1Odd && isNum2Odd && (!isNum1Negative || !isNum2Negative ) ){
+             return  "Both numbers are odd, but at least one is non-negative."
+           }
+           else {
+             return "Conditions are not met."
+           }
+         }
+        </script>
+      </body>
+      </html>

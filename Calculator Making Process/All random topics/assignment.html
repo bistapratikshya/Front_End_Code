@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Assignment1 </title>
+<style>
+table,tr,td{
+  border: 1px solid black; 
+  
+ } 
+</style>
+</head>
+
+<body>
+<h1 style = "text-align:center;"> Students' Information </h1>
+<button type= "button" style = "float:none;" onclick = "showFirstNames()"  > Show Students </button>
+ 
+<script> 
+function showFirstNames(){
+document.getElementById("studentInfo").style.display = "block";
+let firstNames = ["Shivanya", "Komal", "Jasmine" ];
+/*document.getElementById("tableLine1").style.display = "block";*/
+document.getElementById("firstPerson").innerHTML =  firstNames[0];
+/*document.getElementById("tableLine2").style.display = "block";*/
+document.getElementById("secondPerson").innerHTML = firstNames[1];
+/*document.getElementById("tableLine3").style.display = "block";*/
+document.getElementById("thirdPerson").innerHTML =  firstNames[2];
+}
+ 
+
+function showFirstPersonInformation(){
+
+let person = {age : "8", address : "Lalitpur", favouriteColour: "blue"};
+document.getElementById("firstDetails").innerHTML = "Age: " +  person.age  + "<br>"  + "Address: " +person.address + "<br>" + "Favourite-Colour: " + person.favouriteColour;
+}
+
+function showSecondPersonInformation(){
+
+let person = {age : "10", address : "Bhaktapur", favouriteColour: "red"};
+document.getElementById("secondDetails").innerHTML =  "Age: " +  person.age  + "<br>"  + "Address: " +person.address + "<br>" + "Favourite-Colour: " + person.favouriteColour;
+}
+
+function showThirdPersonInformation(){
+
+let person = {age : "12", address : "Kathmandu", favouriteColour: "pink"};
+document.getElementById("thirdDetails").innerHTML =  "Age: " +  person.age  + "<br>"  + "Address: " +person.address + "<br>" + "Favourite-Colour: " + person.favouriteColour;
+
+}
+function hideall(){
+document.getElementById("studentInfo").style.display = "hide";
+
+</script>
+	
+<table id="studentInfo" hidden style= "width:50%" >
+
+	<tr>
+		<td>  Name </td>
+		<td>  Information </td>
+	</tr>
+
+	<tr id="tableLine1">
+	 <td><button id="firstPerson"  onclick = "showFirstPersonInformation()"></button> </td>  
+   <td id="firstDetails"></td>
+	</tr>
+
+	<tr id="tableLine2"> 
+		<td> <button id="secondPerson" onclick = "showSecondPersonInformation()"></button> </td> 
+    <td id="secondDetails"></td>
+	</tr>
+
+	<tr id="tableLine3" >
+	 <td><button  id="thirdPerson"  onclick = "showThirdPersonInformation()" ></button></td> 
+    <td id="thirdDetails"></td>
+	</tr>
+
+
+</table>
+
+<button style = "float:left;"> Appear</button>
+<button style = "float:right;"> Disappear</button>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>  </head>
+<body>
+<p> <input type = "button" value = "click me " onclick = "showNames()">  </p>
+
+<ul>
+<li id = "name1">   </li>
+<li id = "name2">  </li>
+<li id = "name3">  </li>
+<li id = "name4">  </li>
+<li id = "name5">  </li>	
+</ul>
+
+<script>
+function showNames(){
+let names = [ "Ram" , "Shyam" , "Ghanashyam", "Rita" , "Shishir"];
+document.getElementById("name1").innerHTML = names[0];
+document.getElementById("name2").innerHTML = names[1];
+document.getElementById("name3").innerHTML = names[2];
+document.getElementById("name4").innerHTML = names[3];
+document.getElementById("name5").innerHTML = names[4];
+}
+</script>
+	
+</body>
+</html>

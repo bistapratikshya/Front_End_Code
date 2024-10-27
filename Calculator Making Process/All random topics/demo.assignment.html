@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment1</title>
+    <style>
+        table, tr, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Students' Information</h1>
+    <button type="button" style="float: right;" onclick="showNames()">Show Students</button>
+
+    <script>
+        let information = {
+            Shivanya: "Age 7",
+            Komal: "Age 8",
+            Jasmine: "Age 9"
+        };
+
+        function showNames() {
+            document.getElementById("first").innerHTML = '<button onclick="showInfo(\'Shivanya\')">Shivanya</button>';
+            document.getElementById("second").innerHTML = '<button onclick="showInfo(\'Komal\')">Komal</button>';
+            document.getElementById("third").innerHTML = '<button onclick="showInfo(\'Jasmine\')">Jasmine</button>';
+        }
+
+        function showInfo(name) {
+            document.getElementById("info").innerHTML = information[name];
+        }
+    </script>
+    
+    <table style="width: 70%;">
+        <tr>
+            <td>Name</td>
+            <td>Information</td>
+        </tr>
+        <tr>
+            <td id="first"></td>
+            <td rowspan="3" id="info"></td>
+        </tr>
+        <tr>
+            <td id="second"></td>
+        </tr>
+        <tr>
+            <td id="third"></td>
+        </tr>
+    </table>
+</body>
+</html>

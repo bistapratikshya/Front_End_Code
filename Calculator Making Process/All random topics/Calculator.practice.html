@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+<table>
+ <tr>
+  <td colspan="3"> 
+    <input type= "text" id="result"></td>
+  <td><input type="button" value="c" onclick = "removeResult()"></td>
+</tr> 
+<tr>
+  <td> <input type= "button" value= "1" onclick="displayInput('1')"></td>
+  <td><input type="button" value="2" onclick="displayInput('2')"></td>
+  <td> <input type= "button" value="3" onclick="displayInput('3')"></td>
+  <td> <input type="button" value="/" onclick= "displayInput('/')"></td>
+</tr>
+<tr>
+  <td><input type= "button" value="4" onclick="displayInput('4')"></td>
+  <td><input type="button" value="5" onclick="displayInput('5')"></td>
+  <td><input type="button" value="6" onclick="displayInput('6')"></td>
+  <td><input type="button" value="*" onclick="displayInput('*')"></td>
+</tr>
+<tr>
+  <td><input type="button" value="7" onclick="displayInput('7')"></td>
+  <td><input type="button" value="8" onclick="displayInput('8')"></td>
+  <td><input type="button" value="9" onclick="displayInput('9')"></td>
+  <td><input type="button" value="-" onclick="displayInput('-')"></td>
+</tr>
+<tr>
+  <td><input type="button" value="0" onclick="displayInput('0')"></td>
+  <td><input type="button" value="." onclick="displayInput('.')"></td>
+  <td><input type="button" value="=" onclick="calculateResult()"></td>
+  <td><input type="button" value="+" onclick="displayInput('+')"></td>
+</tr>
+
+</table>
+
+<script>
+  function displayInput(input){
+document.getElementById("result").value += input;
+  }
+  function removeResult(){
+document.getElementById("result").value= "0";
+  }
+  function calculateResult(){
+var finalInputs = document.getElementById("result").value;
+var calculatedResult = eval(finalInputs); 
+document.getElementById("result").value = calculatedResult; 
+  }
+  
+</script>
+
+
+
+
+</body>
+</html>
+ 

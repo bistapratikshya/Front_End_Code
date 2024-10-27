@@ -1,0 +1,1 @@
+Question: Write a function calculateDiscount(price, membershipType) that takes a price and a membershipType as parameters. If the membershipType is "gold", apply a 20% discount. If it is "silver", apply a 10% discount. If it is "none", apply no discount. Return the final price after discount.

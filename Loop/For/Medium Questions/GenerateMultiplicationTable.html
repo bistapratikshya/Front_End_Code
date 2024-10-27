@@ -1,0 +1,50 @@
+
+ <!-- **Generate a Multiplication Table (1 to 5)**
+   - Write a JavaScript program that generates and prints a multiplication table for numbers from 1 to 5. -->
+   <!DOCTYPE html>
+   <html>
+   <head></head>
+   <body>
+    <p id = "demo"></p>
+    <script>
+      for(i = 1; i < 11 ; i++)
+      {
+        const multiplicationDisplay = "1 *" + i + " = ";  
+        const result = i * 1;
+        document.getElementById("demo").innerHTML += multiplicationDisplay + result + "<br>" ; 
+
+     }
+     document.getElementById("demo").innerHTML += "<br>" ; 
+
+     for(i = 1; i < 11 ; i++)
+     {
+        const multiplicationDisplay = "2 *" + i + " = ";  
+        const result = i * 2;
+        document.getElementById("demo").innerHTML += multiplicationDisplay + result + "<br>"; 
+     } 
+     document.getElementById("demo").innerHTML += "<br>" ; 
+
+      for(i = 1; i < 11 ; i++)
+     {
+        const multiplicationDisplay = "3 *" + i + " = ";  
+        const result = i * 3;
+        document.getElementById("demo").innerHTML += multiplicationDisplay + result + "<br>"; 
+     } 
+     document.getElementById("demo").innerHTML += "<br>" ;
+
+      for(i = 1; i < 11 ; i++)
+     {
+        const multiplicationDisplay = "4 *" + i + " = ";  
+        const result = i * 4;
+        document.getElementById("demo").innerHTML += multiplicationDisplay + result + "<br>"; 
+     } 
+     document.getElementById("demo").innerHTML += "<br>" ;
+      for(i = 1; i < 11 ; i++)
+     {
+        const multiplicationDisplay = "5 *" + i + " = ";  
+        const result = i * 5;
+        document.getElementById("demo").innerHTML += multiplicationDisplay + result + "<br>"; 
+     } 
+  </script>
+</body>
+</html>

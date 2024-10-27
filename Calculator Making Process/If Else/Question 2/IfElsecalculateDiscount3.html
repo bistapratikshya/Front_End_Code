@@ -1,0 +1,36 @@
+<!-- Question: Write a function calculateDiscount(price, membershipType) that takes a price and a membershipType as parameters. If the membershipType is "gold", apply a 20% discount. If it is "silver", apply a 10% discount. If it is "none", apply no discount. Return the final price after discount. -->
+
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+	<input type = "number" id = "price">
+	<label> Membership Type</label>
+	<select id= "membershipType" name="tt">
+		<option value="gold"> gold</option>
+		<option value="silver"> silver</option>
+		<option value="none"> none</option> 
+	</select>
+		<button onclick = "calculateDiscount()" > Total Amount </button>
+		<p  id = "showResult" ></p>
+
+		<script>
+			function calculateDiscount(){
+				var price = document.getElementById("price").value;
+				var membershipType = document.getElementById("membershipType").value;
+			
+				if (membershipType == "gold"){
+					document.getElementById("showResult").innerHTML = price - (20/100 * price);
+				}
+				else if (membershipType == "silver"){
+					document.getElementById("showResult").innerHTML= price - (10/100 * price);
+				}
+				else if (membershipType == "none"){
+					document.getElementById("showResult").innerHTML = price;
+				}
+			}
+		</script>
+	</body>
+	</html>
+
+

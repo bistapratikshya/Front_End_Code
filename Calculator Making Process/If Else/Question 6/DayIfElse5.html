@@ -1,0 +1,41 @@
+<!-- Determine the Day Question: Write a function dayOfWeek(dayNumber) that takes a number representing a day of the week (1 for Monday through 7 for Sunday) and returns the name of the day. If the input is not between 1 and 7, return "Invalid day number." -->
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+	<label> Day of the week</label>
+	<input type = "number" id = "number">
+	<button onclick = "document.getElementById('day').innerHTML = dayOfWeek(document.getElementById('number').value)"> Click Here </button>
+	<p id = "day"> </p>	
+	
+	<script>
+		function dayOfWeek(number){
+			if( number == 1){
+				 return "The day is Monday";
+			}
+			else if( number == 2){
+				return "The day is Tuesday";
+			}
+			else if( number == 3){
+				return "The day is Wednesday";
+			}
+			else if( number == 4){
+			 return "The day is Thursday";
+			}
+			else if( number == 5){
+				 return "The day is Friday";
+			}
+			else if( number == 6){
+				 return "The day is Saturday";
+			}
+			else if( number == 7){
+				 return "The day is Sunday";
+			}
+			else{
+				 return "Invalid day Number";
+			}
+
+		}
+	</script>
+</body>	
+</html>

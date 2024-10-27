@@ -1,0 +1,34 @@
+<!-- 3. Weather Response Question: Write a function weatherResponse(weather) that takes a string weather representing the current weather. If the weather is "sunny", return "It's a bright day!". If the weather is "rainy", return "Don't forget your umbrella.". If the weather is "snowy", return "Time to build a snowman!". For any other weather condition, return "Weather not recognized.". -->
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+	<h1> If Function</h1>
+	<p id = "about" > Check weather</p>
+	<label> Weather Type</label>
+	<select   onchange = "weatherResponse(document.getElementById('weatherType').value)" id= "weatherType" name="tt">
+		<option value="sunny"> Sunny </option>
+		<option value="rainy"> Rainy</option>
+		<option value="snowy"> Snowy </option> 
+		<option value="other"> Other</option>
+	</select>
+	<script>
+		function weatherResponse(weather){
+			if (weather == "sunny") {
+				document.getElementById('about').innerHTML = "It's a bright day!";
+			}
+			else if(weather == "rainy"){
+				document.getElementById('about').innerHTML = "Don't forget your umbrella.";
+			} 
+			else if(weather == "snowy"){
+				document.getElementById('about').innerHTML = "Time to build a snowman!";
+			}
+			else {
+				document.getElementById('about').innerHTML = "Weather not recognized.";
+			}
+		}
+		
+	</script>
+</body>
+
+</html>

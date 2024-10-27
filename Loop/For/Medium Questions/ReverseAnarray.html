@@ -1,0 +1,21 @@
+<!-- **Reverse an Array**
+   - Write a JavaScript program that reverses the elements of an array (e.g., `[5, 10, 15, 20, 25]`) and prints the reversed array.
+ -->
+ <!DOCTYPE html>
+   <html>
+   <head></head>
+   <body>
+      <p id = "demo"></p>
+      <script>
+      const numberArray = [5,10,15,20,25,30,35,40];
+      const reverseArray =[];
+      for(i=numberArray.length - 1; i>=0; i--)
+      {
+        const number = numberArray[i];
+        reverseArray.push(number);
+      }
+      document.getElementById("demo").innerHTML = reverseArray;
+     </script>
+  </body>
+  </html>
+  

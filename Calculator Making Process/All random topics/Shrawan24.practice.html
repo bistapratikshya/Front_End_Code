@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head> <title>  Practice Calculator on timer</title></head>
+<body>
+<table>
+<tr>
+<td colspan = "4"> <input type = "text" id = "resultBox"> </td>
+</tr>
+
+<tr>
+	<td> <input type = "button" value = "+" onclick = "myResult('+')"></td>
+	<td> <input type = "button" value = "-" onclick = "myResult('-')"></td>
+	<td> <input type = "button" value = "*" onclick = "myResult('*')"></td>
+	<td> <input type = "button" value = "/" onclick = "myResult('/')"></td>
+</tr>
+
+<tr>
+	<td><input type = "button" value = "1" onclick = "myResult(1)"></td>
+	<td> <input type = "button" value = "2" onclick = "myResult(2)"></td>
+	<td> <input type = "button" value = "3" onclick = "myResult(3)"></td>
+	<td rowspan = "5"> <input type = "button" value = "=" onclick = "finalOutput()"></td>
+</tr>
+
+<tr>
+	<td><input type = "button" value = "4" onclick = "myResult(4)"></td>
+	<td><input type = "button" value = "5" onclick = "myResult(5)"></td>
+	<td><input type = "button" value = "6" onclick = "myResult(6)"></td> 
+</tr>
+
+<tr>
+	<td><input type = "button" value = "7" onclick = "myResult(7)" ></td>
+	<td><input type = "button" value = "8" onclick = "myResult(8)"></td>
+	<td><input type = "button" value = "9" onclick = "myResult(9)"></td>
+</tr>
+
+<tr>
+	<td><input type = "button" value = "0" onclick = "myResult(0)"></td>
+	<td><input type = "button" value = "." onclick = "myResult(.)"></td>
+	<td><input type = "button" value = "AC" onclick = "removeResult()"></td>
+</tr>
+
+<tr>
+	<td><input type = "button" value = "x2" onclick = "squareNumber()"></td>
+	<td><input type = "button" value = "x3" onclick = "cubeNumber()"></td>
+	<td><input type = "button" value = "sqroot" onclick = "squareRoot()"></td>
+</tr>	
+</table>
+
+<script>
+	function myResult(input){
+	document.getElementById("resultBox").value += input;
+	}
+
+	function finalOutput(){
+	let firstInput = document.getElementById("resultBox").value;
+	let secondInput = eval(firstInput);
+	document.getElementById("resultBox").value = secondInput;	
+	}
+
+	function removeResult(){
+	document.getElementById("resultBox").value = 0; 	
+	}
+
+	function squareNumber(){
+	let fNumber = document.getElementById("resultBox").value;
+	let sNumber = eval (fNumber);
+	document.getElementById("resultBox").value = sNumber*sNumber ;
+	}
+
+	function cubeNumber(){
+	let fNumber = document.getElementById("resultBox").value;
+	let sNumber = eval (fNumber);
+	document.getElementById("resultBox").value = sNumber*sNumber*sNumber ;
+	}
+
+	function squareRoot(){
+	let fNumber = document.getElementById("resultBox").value;
+	let sNumber = eval (fNumber);
+	document.getElementById("resultBox").value = Math.sqrt(sNumber) ;
+	}
+</script>
+
+</body>
+</html>

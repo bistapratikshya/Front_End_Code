@@ -1,0 +1,36 @@
+<!-- **Find the Factorial of a Number (e.g., 7!)**
+   - Write a JavaScript program that calculates and prints the factorial of a number (e.g., 7!). -->
+   <!DOCTYPE html>
+   <html>
+   <head></head>
+   <body>
+      <label> Enter a Number </label>
+      <input type = "number" id = "number">
+      <button onclick = "myFunction()" > Calculate Factorial </button>
+      <p id = "demo"></p>
+      <script>
+         function myFunction()
+         {
+            let number = document.getElementById("number").value;
+            let factorial = 1;
+            let factorialSeries = "";
+            for(i=1; i<=number; i++) 
+            {
+               if (i == number)
+               {
+                factorialSeries += i; 
+             }
+             else
+             {
+              factorialSeries += i+" * ";
+           }
+           
+           factorial *= i;
+            /*This is same as factorial = factorial*i;*/
+        }
+        document.getElementById("demo").innerHTML = factorialSeries +" = " + factorial;
+     }
+     
+  </script>
+</body>
+</html>
